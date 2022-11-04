@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<meta charset="UTF-8">
+		{# Load the tag library #}
+		{% load bootstrap5 %}
+		{# Load CSS and JavaScript #}
+		{% bootstrap_css %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'src/css/custom.css' %}">
+		{% bootstrap_javascript %}
+		{# Display django.contrib.messages as Bootstrap alerts #}
+		{% bootstrap_messages %}
+	</head>
+	<title>Wrath Diminishing Returns</title>
+	<body>
+		<header class="p-3 bg-dark">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+					<H3 class="navbar-brand">WoWPVP.info</H3>
+				</a>
+				<!--Unordered list of nav links thats currently empty, saving for later-->
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+				</ul>
+				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+					<input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+				</form>
+				<div class="text-end">
+					<button type="button" class="btn btn-outline-light me-2">Login</button>
+					<button type="button" class="btn btn-warning">Sign-up</button>
+				</div>
+			</div>
+			</div>
+		</header>
+        <div class="main content bg-dark">
+			<h2 class="text-center border-bottom text-light bg-dark bg-gradient">Diminishing returns by Class and Skill</h2>
+			
+				<div class="container px-5 py-5 bg-dark">
+                    <div class="accordion px-5 py-5 bg-dark bg-gradient" id="accordion">
+                        {%for x in class_list%}
+                        <div class="accordion-item bg-{{x.class_name}}" id="accordion{{x.class_name}}" aria-expanded="false">
+                            <h2 class="accordion-header text-{{x.class_name}}" id="heading{{x.class_name}}">
+                                <span class="accordion-button bg-dark bg-gradient text-{{x.class_name}}"  type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{x.class_name}}" aria-expanded="false" aria-controls="collapse{{x.class_name}}">
+                                {{x.class_name}}
+                                </span>
+                            </h2>
+                            <div id="collapse{{x.class_name}}" class="accordion-collapse collapse" aria-labelledby="heading{{x.class_name}}" data-bs-parent="#accordion{{x.class_name}}">
+                                <div class="accordion-body">
+                                    
+                                        <div class="accordion" id="accordion{{y.skill_name}}">
+                                            {% for y in skills %}
+                                                {% if y.class_name == x.class_name %}
+                                                <div class="accordion-item" id="accordion{{y.skill_name}}">
+                                                    <h2 class="accordion-header" id="heading{{y.skill_name}}">
+                                                        <span class="accordion-button bg-dark bg-gradient text-{{x.class_name}}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{y.skill_name}}" aria-expanded="false" aria-controls="collapse{{y.skill_name}}">
+                                                        {{y.skill_name}}
+                                                        </span>
+                                                    </h2>
+                                                    <div id="collapse{{y.skill_name}}" class="accordion-collapse collapse bg-dark bg-gradient" aria-labelledby="heading{{y.skill_name}}" data-bs-parent="#accordion{{y.skill_name}}">
+                                                        <div class="px-5 py-5">    
+                                                                <ul data-columns="2" class ="px-0" style="list-style-type:none" >
+                                                                <div class="row">
+                                                                {% for z in skills%}
+                                                                {% if y.dr_cat == z.dr_cat and z.skill_name != y.skill_name%}
+                                                                <div class="text-center text-{{z.class_name}}">
+                                                                        <li>{{z.skill_name}}</li>
+                                                                </div>
+                                                                {%endif%}
+                                                                {%endfor%}
+                                                                </div>   
+                                                                </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </div>
+                                 
+                                </div>
+                              </div>
+
+                            
+                        </div>
+                        {%endfor%}
+                    
+                </div>
+            </div>
+                
+                <div class="col">
+                    yo
+                </div>
+                <div class="col">
+                    yo
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

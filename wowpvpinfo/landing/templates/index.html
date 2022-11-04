@@ -1,0 +1,28 @@
+{# Load the tag library #}
+{% load bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">WowPvp.info</a>
+    </div>
+</nav>
+<body class = "bg-secondary">
+    <h1 class="text-center">Choose your Expansion</h1>
+    <div class="row">
+        
+        <div class="card" style="width: 11%">WRATH</div>
+        <div class="card" style="width: 11%">RETAIL</div>
+    </div>
+
+        <a href="/wotlk">WRATH</a>
+        <a href="/retail">RETAIL</a>
+    </div>
+</body>

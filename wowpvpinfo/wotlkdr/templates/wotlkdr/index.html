@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<meta charset="UTF-8">
+		{# Load the tag library #}
+		{% load bootstrap5 %}
+		{# Load CSS and JavaScript #}
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+		{# Display django.contrib.messages as Bootstrap alerts #}
+		{% bootstrap_messages %}
+	</head>
+	<title>Wrath DR's</title>
+	<body>
+		<header class="p-3 bg-dark text-white">
+			<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+				<a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+					<H3 class="navbar-brand">WoWPVP.info</H3>
+				</a>
+				<!--Unordered list of nav links thats currently empty, saving for later-->
+				<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+				</ul>
+				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+					<input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+				</form>
+				<div class="text-end">
+					<button type="button" class="btn btn-outline-light me-2">Login</button>
+					<button type="button" class="btn btn-warning">Sign-up</button>
+				</div>
+			</div>
+			</div>
+		</header>
+		<div class="main content bg-secondary bg-gradient">
+			<h2 class="text-center border-bottom">Diminishing returns by category</h2>
+			<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-2" id="featured-3">
+				<div class="col">
+					<div class="row g-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Controlled Stun</h2>
+							</div>
+							<ul data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-1 row-cols-lg-2">
+									{% for x in cs%}								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-10 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Silence</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in silence%}
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% endif%}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Controlled Root</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in cr%}
+								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-2" id="featured-3">
+				<div class="col">
+					<div class="row g-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Fear</h2>
+							</div>
+							<ul data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in fear%}								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-10 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Random Root</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in rr%}
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% endif%}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Opener Stun</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in os%}
+								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-2" id="featured-3">
+				<div class="col">
+					<div class="row g-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Disorient</h2>
+							</div>
+							<ul data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in disorient%}								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+                                        </div>
+                                        <div class="row row-cols-2 row-cols-lg-2">								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-10 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Incapacitate</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in incap%}
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% endif%}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Disarm</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in disarm%}
+								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-2" id="featured-3">
+				<div class="col">
+					<div class="row g-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Random Stun</h2>
+							</div>
+							<ul data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in rs%}								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-10 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>Horror</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in horror%}
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% endif%}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row g-1 px-1 py-5bg-dark h-100">
+						<div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
+							<div class="feature-icon bg-dark bg-gradient text-light text-center">
+								<h2>No DR Category</h2>
+							</div>
+							<ul  data-columns="2" class ="px-0" style="list-style-type:none" >
+								<div class="row row-cols-2 row-cols-lg-2">
+									{% for x in none%}
+								
+									<li class="text-center">{{x.skill_name}}</li>
+									{% if forloop.counter|divisibleby:2 %}
+								</div>
+								<div class="row row-cols-2 row-cols-lg-2">
+								
+									{% endif %}
+									{% endfor%}
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</body>
+</html>
