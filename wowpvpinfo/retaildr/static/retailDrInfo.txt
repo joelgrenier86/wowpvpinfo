@@ -1,0 +1,109 @@
+207167,disorient,Blinding Sleet,DK
+207685,disorient,Sigil of Misery,DH
+33786,disorient,Cyclone,Druid
+1513,disorient,Scare Beast,Hunter
+31661,disorient,Dragon's Breath,Mage
+198909,disorient,Song of Chi-ji,Monk
+202274,disorient,Incendiary Brew,Monk
+105421,disorient,Blinding Light,Paladin
+10326,disorient,Turn Evil,Paladin
+605,disorient,Mind Control,Priest
+8122,disorient,Psychic Scream,Priest
+226943,disorient,Mind Bomb,Priest
+2094,disorient,Blind,Rogue
+118699,disorient,Fear,Warlock
+5484,disorient,Howl of Terror,Warlock
+6358,disorient,Seduction,Warlock
+5246,disorient,Intimidating Shout,Warrior
+217832,incapacitate,Imprison,DH
+2637,incapacitate,Hibernate,Druid
+99,incapacitate,Incapacitating Roar,Druid
+3355,incapacitate,Freezing Trap,Hunter
+213691,incapacitate,Scatter Shot,Hunter
+118,incapacitate,Polymorph,Mage
+82691,incapacitate,Ring of Frost,Mage
+115078,incapacitate,Paralysis,Monk
+20066,incapacitate,Repentance,Paladin
+9484,incapacitate,Shackle Undead,Priest
+200196,incapacitate,Holy Word:Chastise,Priest
+1776,incapacitate,Gouge,Rogue
+6770,incapacitate,Sap,Rogue
+51514,incapacitate,Hex,Shaman
+197214,incapacitate,Sundering,Shaman
+710,incapacitate,Banish,Warlock
+6789,incapacitate,Mortal Coil,Warlock
+107079,incapacitate,Quaking Palm,Racial
+47476,silence,Strangulate,DK
+204490,silence,Sigil of Silence,DH
+78675,none,Solar Beam,Druid
+202933,silence,Spider Sting,Hunter
+356727,silence,Spider Venom, Hunter
+217824,silence,Shield of Virtue, Paladin
+15487,silence,Silence, Priest
+1330,silence,Garrote,Rogue
+196364,silence,Unstable Affliction,Warlock
+210141,stun,Zombie Explosion,DK
+334693,stun,Absolute Zero,DK
+221562,stun,Asphyxiate,DK
+91800,stun,Gnaw,DK
+91797,stun,Monstrous Blow,DK
+287254,stun,Dead of Winter,DK
+179057,stun,Chaos Nova,DH
+205630,stun,Illidan's Grasp,DH
+211881,stun,Fel Eruption,DH
+203123,stun,Maim,Druid
+163505,stun,Rake,Druid
+5211,stun,Mighty Bash,Druid
+202244,stun,Overrun,Druid
+357021,stun,Consecutive Concussion,Hunter
+24394,stun,Intimidation,Hunter
+119381,stun,Leg Sweep,Monk
+202346,stun,Double Barrel,Monk
+853,stun,Hammer of Justice,Paladin
+255941,stun,Wake of Ashes,Paladin
+64044,stun,Psychic Horror,Priest
+200200,stun,Holy Word:Chastise with Stun,Priest
+1833,stun,Cheap Shot,Rogue
+408,stun,Kidney Shot,Rogue
+118905,stun,Static Charge,Shaman
+118345,stun,Pulverize,Shaman
+305485,stun,Lightning Lasso,Shaman
+89766,stun,Axe Toss,Warlock
+171017,stun,Meteor Strike,Warlock
+30283,stun,Shadowfury,Warlock
+46968,stun,Shockwave,Warrior
+132169,stun,Storm Bolt,Warrior
+199085,stun,Warpath,Warrior
+20549,stun,War Stomp,Racial
+255723,stun,Bull Rush,Racial
+287712,stun,Haymaker,Racial
+204085,root,Deathchill,DK
+339,root,Entangling Roots,Druid
+102359,root,Mass Entanglement,Druid
+117526,root,Binding Shot,Hunter
+162480,root,Steel Trap,Hunter
+273909,root,Steelclaw Trap,Hunter
+212638,root,Tracker's Net,Hunter
+201158,root,Super Sticky Tar,Hunter
+122,root,Frost Nova,Mage
+33395,root,Freeze,Mage
+198121,root,Frostbite,Mage
+233582,root,Entrenched in Flame,Warlock
+116706,root,Disable,Monk
+324382,root,Clash,Monk
+64695,root,Earthgrab,Shaman
+285515,root,Surge of Power,Shaman
+209749,disarm,Faerie Swarm,Druid
+207777,disarm,Dismantle,Rogue
+233759,disarm,Grapple Weapon,Monk
+236077,disarm,Disarm,Warrior
+108199,knockback,Gorefiend's Grasp,DK
+202249,knockback,Overrun,Druid
+61391,knockback,Typhoon,Druid
+102793,knockback,Ursol's Vortex,Druid
+186387,knockback,Bursting Shot,Hunter
+236777,knockback,Hi-Explosive Trap,Hunter
+157981,knockback,Blast Wave,Mage
+237371,knockback,Ring of Peace,Monk
+204263,knockback,Shining Force,Priest
+51490,knockback,Thunderstorm,Shaman
