@@ -36,7 +36,7 @@
                 v-ripple
               >
                 <q-item-section avatar>
-                  <img :src="getClassIcon(skill)">
+                
                 </q-item-section>
 
                 <q-item-section>{{skill.skill_name}}</q-item-section>
@@ -66,7 +66,7 @@
               
                
                   
-              <q-chip v-for="skill in sharedDr" :key="skill.pk" :class="['bg-' + skill.class_name]" class="skill-chip" text-color="black" icon="bluetooth">
+              <q-chip v-for="skill in sharedDr" :key="skill.pk" :class="['bg-' + skill.class_name]" class="skill-chip text-center" text-color="black">
                 {{skill.skill_name}}
               </q-chip>
                     
