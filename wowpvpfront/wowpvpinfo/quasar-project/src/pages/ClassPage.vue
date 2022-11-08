@@ -57,7 +57,7 @@
 
 
         
-          <div >
+          <div>
             <div class = "row">
           
             <h2 class="text-center text-white" style="width:100%"> {{selectedSkill.skill_name}} shares DR with:</h2>
