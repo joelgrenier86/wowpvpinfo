@@ -15,7 +15,7 @@
 
             >
               <q-item-section avatar>
-                <img :src="'src/assets/classicon_' + data.class_name +'.png'">
+                <img :src="'src/assets/classicon_' + data.class_name +'.png'" style="height:36px"/>
               
               </q-item-section>
 
@@ -36,7 +36,7 @@
                 v-ripple
               >
                 <q-item-section avatar>
-                
+                  <img :src="'src/assets/icons/' + getSkillIcon(skill)" style="height:32px">
                 </q-item-section>
 
                 <q-item-section>{{skill.skill_name}}</q-item-section>
@@ -60,13 +60,18 @@
           <div>
             <div class = "row">
           
-            <h2 class="text-center text-white" style="width:100%"> {{selectedSkill.skill_name}} shares DR with:</h2>
+            <h3 class="text-center text-white shared-title" style="width:100%"> {{selectedSkill.skill_name}} shares DR with:</h3>
            </div>
             <div class="chip-box">
               
                
                   
-              <q-chip v-for="skill in sharedDr" :key="skill.pk" :class="['bg-' + skill.class_name]" class="skill-chip text-center" text-color="black">
+              <q-chip v-for="skill in sharedDr" :key="skill.pk" :class="['bg-' + skill.class_name]" class="skill-chip text-left" text-color="black">
+                <q-item-section avatar>
+                <img :src="'src/assets/icons/' + getSkillIcon(skill)" style="height:32px">
+              
+              </q-item-section>
+                
                 {{skill.skill_name}}
               </q-chip>
                     
@@ -99,6 +104,7 @@ export default {
                 imageSrc:{type:String},
                 bgColor:{type: String, default: "bg-grey-8"},
                 selectedSkill:{},
+            
                
                
 
@@ -114,10 +120,12 @@ export default {
                       api.get('skills?search=' + class_name)
                       .then(response =>{
                       this.skills = response.data
+
                     })
                     .catch(e => {
                       this.errors.push(e)
                     })
+
                   }
                 },
                 fetchSharedDr(skill){
@@ -125,18 +133,27 @@ export default {
                   api.get('skills?search=' + skill.dr_cat)
                       .then(response =>{
                       this.sharedDr = response.data
+          
                     })
                     .catch(e => {
                       this.errors.push(e)
                     })
                     
+                    
+                    
                 },
+    
+                
                 getClassIcon(skill)
                   {
                 
                     
                     return "~assets/classicon_" + skill.class_name +".jpg"
-                  },        
+                  },   
+                  getSkillIcon(skill)
+                  {
+                    return skill.skill_name.split(' ').join('') +".jpg"
+                  }     
 },
         computed:{
           bgImage() {
@@ -144,6 +161,7 @@ export default {
               backdropFilter: 'blur(10px)'
                     }
             },
+
         
           },
 
