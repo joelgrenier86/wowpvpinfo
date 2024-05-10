@@ -37,9 +37,9 @@
 204490,silence,Sigil of Silence,DH
 78675,none,Solar Beam,Druid
 202933,silence,Spider Sting,Hunter
-356727,silence,Spider Venom, Hunter
-217824,silence,Shield of Virtue, Paladin
-15487,silence,Silence, Priest
+356727,silence,Spider Venom,Hunter
+217824,silence,Shield of Virtue,Paladin
+15487,silence,Silence,Priest
 1330,silence,Garrote,Rogue
 196364,silence,Unstable Affliction,Warlock
 210141,stun,Zombie Explosion,DK

@@ -4,7 +4,7 @@ from django.db import migrations
 def add_retail_skills(apps, schema_editor):
     Skill = apps.get_model('retaildr', 'Skill')
     skills=[]
-    textFile = open(r'C:\Users\Joel\Documents\projects\WowPvpInfo\wowpvpinfo\retaildr\static\retailDrInfo.txt', 'r')
+    textFile = open(r'C:\Users\Joel\Documents\code\WowPvpInfo\wowpvpinfo\retaildr\static\retailDrInfo.txt', 'r')
     byLine = textFile.readlines()
     for line in byLine:
         print(line)

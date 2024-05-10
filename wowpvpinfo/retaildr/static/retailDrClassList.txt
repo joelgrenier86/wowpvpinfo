@@ -1,0 +1,13 @@
+DK
+DH
+Druid
+Evoker
+Hunter
+Mage
+Monk
+Paladin
+Priest
+Rogue
+Shaman
+Warlock
+Warrior
